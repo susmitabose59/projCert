@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage ("stage1-checkout") {
       steps {
-        git 'git@github.com:susmitabose59/projCert.git'
+        echo 'checkout stage'
       }
     }
     
