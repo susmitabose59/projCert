@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage ("stage1 Docker Build") {
       steps {
-        sh 'docker image build susmitabose59/Applebite .'
+        sh 'sudo docker image build susmitabose59/Applebite .'
       }
     }
     
