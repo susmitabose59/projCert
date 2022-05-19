@@ -11,5 +11,5 @@ pipeline {
     stage ("stage2-compile") {
     }
   }
-  
+}
   
