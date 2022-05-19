@@ -2,9 +2,9 @@ pipeline {
   agent any 
   
   stages {
-    stage ("stage1-checkout") {
+    stage ("stage1 Docker Build") {
       steps {
-        echo 'checkout stage'
+        docker image build susmitabose59/Applebite
       }
     }
     
