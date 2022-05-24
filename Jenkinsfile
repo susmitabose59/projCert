@@ -11,7 +11,7 @@ pipeline {
     stage ("stage2-Docker Run") {
       steps {
         sh '''
-          sudo docker rm -f AppleBite
+          sudo docker rm -f AppleBite || true
           sudo docker run -dit --name AppleBite -p 9080:8080 susmitabose59/applebite
         '''
       }
