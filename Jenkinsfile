@@ -8,9 +8,9 @@ pipeline {
       }
     }
     
-    stage ("stage2-compile") {
+    stage ("stage2-Docker Run") {
       steps {
-        echo 'New Stage'
+        sh 'sudo docker run -dit --name AppleBite -p 9080:8080 susmitabose59/applebite'
       }
     }
   }
