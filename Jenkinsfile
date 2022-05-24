@@ -26,5 +26,6 @@ pipeline {
     failure {
       mail to:"susmitabose59@gmail.com", subject:"FAILED: ${currentBuild.fullDisplayName}", body: "Job has failed."
     }
+  }
 }
   
