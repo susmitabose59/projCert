@@ -2,18 +2,24 @@ pipeline {
   agent any 
   
   stages {
-    stage ("stage1 Docker Build") {
+    stage ("Stage 1: Docker Build") {
       steps {
         sh 'sudo docker build -t susmitabose59/applebite .'
       }
     }
     
-    stage ("stage2-Docker Run") {
+    stage ("Stage 2: Docker Run") {
       steps {
         sh '''
           sudo docker rm -f AppleBite || true
           sudo docker run -dit --name AppleBite -p 9080:8080 susmitabose59/applebite
         '''
+      }
+    }
+    
+    stage ("Stage 3: Docker Deploy") {
+      steps {
+        sh 'sudo docker push susmitabose59/applebite'
       }
     }
   }
