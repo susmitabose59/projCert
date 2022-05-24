@@ -20,11 +20,13 @@ pipeline {
   
   post {
     success {
-      mail to:"susmitabose59@gmail.com", subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "Job has passed."
+      sh 'echo "JOB SUCCEEDED!!"'
+      //mail to:"susmitabose59@gmail.com", subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "Job has passed."
     }
     
     failure {
-      mail to:"susmitabose59@gmail.com", subject:"FAILED: ${currentBuild.fullDisplayName}", body: "Job has failed."
+      sh 'echo "JOB FAILED!!"'
+      //mail to:"susmitabose59@gmail.com", subject:"FAILED: ${currentBuild.fullDisplayName}", body: "Job has failed."
     }
   }
 }
