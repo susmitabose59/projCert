@@ -10,7 +10,7 @@ pipeline {
     
     stage ("stage2-Docker Run") {
       steps {
-        sh 'sudo docker run -dit --name AppleBite -p 9080:8080 susmitabose59/applebite'
+        sh 'sudo docker run --name AppleBite -p 9080:8080 susmitabose59/applebite'
       }
     }
   }
