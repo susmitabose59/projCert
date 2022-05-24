@@ -19,7 +19,10 @@ pipeline {
     
     stage ("Stage 3: Docker Deploy") {
       steps {
-        sh 'sudo docker push susmitabose59/applebite'
+        sh '''
+          sudo docker login
+          sudo docker push susmitabose59/applebite
+        '''
       }
     }
   }
