@@ -12,7 +12,7 @@ pipeline {
       steps {
         sh '''
           sudo docker rm -f AppleBite
-          sudo docker -dit run --name AppleBite -p 9080:8080 susmitabose59/applebite
+          sudo docker run -dit --name AppleBite -p 9080:8080 susmitabose59/applebite
         '''
       }
     }
